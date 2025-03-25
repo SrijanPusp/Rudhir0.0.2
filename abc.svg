@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400">
+  <!-- Background -->
+  <rect width="600" height="400" fill="#f5f5f5"/>
+  
+  <!-- Blood Bag -->
+  <path d="M240,80 L360,80 C380,80 390,90 390,110 L390,290 C390,310 380,320 360,320 L240,320 C220,320 210,310 210,290 L210,110 C210,90 220,80 240,80 Z" fill="#ffffff" stroke="#d32f2f" stroke-width="3"/>
+  
+  <!-- Blood Inside Bag -->
+  <path d="M220,140 L380,140 L380,290 C380,305 370,310 360,310 L240,310 C230,310 220,305 220,290 Z" fill="#d32f2f"/>
+  
+  <!-- Top Connectors -->
+  <rect x="270" y="60" width="60" height="20" fill="#f5f5f5" stroke="#d32f2f" stroke-width="2"/>
+  <path d="M300,60 L300,30" stroke="#d32f2f" stroke-width="3" fill="none"/>
+  
+  <!-- Heart -->
+  <path d="M300,240 C320,220 350,240 300,280 C250,240 280,220 300,240 Z" fill="#ffffff"/>
+  
+  <!-- Text Label on Blood Bag -->
+  <text x="300" y="200" font-family="Arial" font-size="18" fill="#ffffff" text-anchor="middle" font-weight="bold">TYPE O+</text>
+  
+  <!-- Main Title -->
+  <text x="300" y="360" font-family="Arial" font-size="24" fill="#d32f2f" text-anchor="middle" font-weight="bold">DONATE BLOOD, SAVE LIVES</text>
+  
+  <!-- Subtitle -->
+  <text x="300" y="385" font-family="Arial" font-size="16" fill="#333333" text-anchor="middle">Every drop counts</text>
+  
+  <!-- Measurement Lines -->
+  <line x1="215" y1="150" x2="205" y2="150" stroke="#333333" stroke-width="1"/>
+  <line x1="215" y1="180" x2="205" y2="180" stroke="#333333" stroke-width="1"/>
+  <line x1="215" y1="210" x2="205" y2="210" stroke="#333333" stroke-width="1"/>
+  <line x1="215" y1="240" x2="205" y2="240" stroke="#333333" stroke-width="1"/>
+  <line x1="215" y1="270" x2="205" y2="270" stroke="#333333" stroke-width="1"/>
+  
+  <!-- Small Blood Drops -->
+  <path d="M440,130 C450,110 460,130 450,145 C440,130 430,110 440,130 Z" fill="#d32f2f"/>
+  <path d="M470,190 C480,170 490,190 480,205 C470,190 460,170 470,190 Z" fill="#d32f2f"/>
+  <path d="M150,150 C160,130 170,150 160,165 C150,150 140,130 150,150 Z" fill="#d32f2f"/>
+  <path d="M120,210 C130,190 140,210 130,225 C120,210 110,190 120,210 Z" fill="#d32f2f"/>
+</svg>
