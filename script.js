@@ -140,8 +140,8 @@ document.addEventListener('DOMContentLoaded', function() {
             setTimeout(() => {
                 searchBtn.classList.remove('loading');
                 searchBtn.innerHTML = 'Search';
-                showToast(`Found ${bloodGroup} blood donors in ${location}!`, 'success');
-            }, 1500);
+                showToast('This functionality will soon be implemented.', 'info');
+            }, 1000);
         });
     }
     
@@ -149,39 +149,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const locationBtn = document.getElementById('use-location');
     if (locationBtn) {
         locationBtn.addEventListener('click', function() {
-            // Add animation to the button
-            locationBtn.classList.add('pulse');
-            
-            if (navigator.geolocation) {
-                showToast('Getting your location...', 'info');
-                
-                navigator.geolocation.getCurrentPosition(
-                    position => {
-                        // Success: show location found animation
-                        locationBtn.classList.remove('pulse');
-                        locationBtn.innerHTML = '<i class="fas fa-check"></i>';
-                        setTimeout(() => {
-                            locationBtn.innerHTML = '<i class="fas fa-map-marker-alt"></i>';
-                        }, 1500);
-                        
-                        document.getElementById('location').value = 'Using current location';
-                        showToast('Location found!', 'success');
-                    },
-                    error => {
-                        // Error: show error animation
-                        locationBtn.classList.remove('pulse');
-                        locationBtn.innerHTML = '<i class="fas fa-exclamation-triangle"></i>';
-                        setTimeout(() => {
-                            locationBtn.innerHTML = '<i class="fas fa-map-marker-alt"></i>';
-                        }, 1500);
-                        
-                        showToast('Error accessing location: ' + error.message, 'error');
-                    }
-                );
-            } else {
-                locationBtn.classList.remove('pulse');
-                showToast('Geolocation is not supported by this browser.', 'error');
-            }
+            showToast('This functionality will soon be implemented.', 'info');
         });
     }
     
@@ -224,40 +192,14 @@ document.addEventListener('DOMContentLoaded', function() {
     if (loginBtn) {
         loginBtn.addEventListener('click', function(e) {
             e.preventDefault();
-            
-            // Add scale animation
-            loginBtn.classList.add('scale');
-            setTimeout(() => {
-                loginBtn.classList.remove('scale');
-            }, 300);
-            
-            showToast('Opening login form...', 'info');
-            
-            // Here you would typically open a modal with login form
-            // For demo purposes, we'll simulate a successful login after delay
-            setTimeout(() => {
-                showToast('Login successful!', 'success');
-            }, 2000);
+            showToast('This functionality will soon be implemented.', 'info');
         });
     }
     
     if (signupBtn) {
         signupBtn.addEventListener('click', function(e) {
             e.preventDefault();
-            
-            // Add scale animation
-            signupBtn.classList.add('scale');
-            setTimeout(() => {
-                signupBtn.classList.remove('scale');
-            }, 300);
-            
-            showToast('Opening sign up form...', 'info');
-            
-            // Here you would typically open a modal with signup form
-            // For demo purposes, we'll simulate a successful registration after delay
-            setTimeout(() => {
-                showToast('Registration successful! Welcome to BloodDonor.', 'success');
-            }, 2000);
+            showToast('This functionality will soon be implemented.', 'info');
         });
     }
     
@@ -388,7 +330,7 @@ document.addEventListener('DOMContentLoaded', function() {
             justify-content: center;
             z-index: 2000;
             opacity: 0;
-            transition: opacity 0.3s ease;
+            transition: opacity 0.2s ease;
         }
         
         .modal-container.active {
@@ -401,7 +343,7 @@ document.addEventListener('DOMContentLoaded', function() {
             width: 90%;
             max-width: 500px;
             transform: translateY(20px);
-            transition: transform 0.3s ease;
+            transition: transform 0.2s ease;
             overflow: hidden;
         }
         
@@ -444,33 +386,15 @@ document.addEventListener('DOMContentLoaded', function() {
         
         /* Button animations */
         .pulse {
-            animation: pulse 1.5s infinite;
+            animation: none;
         }
         
         .scale {
-            animation: scale 0.3s ease;
-        }
-        
-        @keyframes scale {
-            0% { transform: scale(1); }
-            50% { transform: scale(0.95); }
-            100% { transform: scale(1); }
+            animation: none;
         }
         
         .ripple {
-            position: absolute;
-            background: rgba(255, 255, 255, 0.3);
-            border-radius: 50%;
-            transform: scale(0);
-            animation: ripple 0.6s linear;
-            pointer-events: none;
-        }
-        
-        @keyframes ripple {
-            to {
-                transform: scale(2.5);
-                opacity: 0;
-            }
+            display: none;
         }
     `;
     document.head.appendChild(style);

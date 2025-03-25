@@ -4,7 +4,7 @@
   --text-dark: #333;
   --text-light: #f5f5f5;
   --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  --transition-standard: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  --transition-standard: all 0.2s ease;
 }
 
 * {
@@ -31,22 +31,18 @@ body {
   padding: 0 20px;
 }
 
-/* Animations */
+/* Simplified Animations */
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
 }
 
 @keyframes slideUp {
-  from { transform: translateY(50px); opacity: 0; }
+  from { transform: translateY(20px); opacity: 0; }
   to { transform: translateY(0); opacity: 1; }
 }
 
-@keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.05); }
-  100% { transform: scale(1); }
-}
+/* Remove unused animations */
 
 @keyframes ripple {
   0% { box-shadow: 0 0 0 0 rgba(229, 57, 53, 0.4); }
@@ -97,7 +93,7 @@ header.scroll-up {
 }
 
 .logo:hover {
-  transform: scale(1.05);
+  transform: scale(1.02);
 }
 
 .logo i {
@@ -106,7 +102,7 @@ header.scroll-up {
 }
 
 .logo:hover i {
-  transform: rotate(15deg);
+  transform: none;
 }
 
 .nav-links {
@@ -131,7 +127,7 @@ header.scroll-up {
   content: '';
   position: absolute;
   width: 0;
-  height: 2px;
+  height: 1px;
   bottom: 0;
   left: 0;
   background-color: var(--primary);
@@ -156,21 +152,15 @@ header.scroll-up {
 }
 
 .btn::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 0;
-  height: 0;
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  transition: width 0.3s, height 0.3s;
+  display: none;
 }
 
-.btn:active::after {
-  width: 300px;
-  height: 300px;
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn:active {
+  transform: none;
 }
 
 .btn-primary {
@@ -181,12 +171,12 @@ header.scroll-up {
 
 .btn-primary:hover {
   background-color: var(--primary-dark);
-  transform: translateY(-2px);
+  transform: translateY(-1px);
   box-shadow: 0 4px 8px rgba(229, 57, 53, 0.4);
 }
 
 .btn-primary:active {
-  transform: translateY(1px);
+  transform: none;
   box-shadow: 0 2px 3px rgba(229, 57, 53, 0.4);
 }
 
@@ -199,12 +189,12 @@ header.scroll-up {
 .btn-outline:hover {
   background-color: var(--primary);
   color: white;
-  transform: translateY(-2px);
+  transform: translateY(-1px);
   box-shadow: 0 4px 8px rgba(229, 57, 53, 0.2);
 }
 
 .btn-outline:active {
-  transform: translateY(1px);
+  transform: none;
   box-shadow: 0 2px 3px rgba(229, 57, 53, 0.2);
 }
 
@@ -358,7 +348,6 @@ header.scroll-up {
 
 .location-input i:hover {
   transform: scale(1.2);
-  animation: pulse 1s infinite;
 }
 
 /* Features Section */
@@ -419,7 +408,7 @@ header.scroll-up {
 }
 
 .feature-card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-3px);
   box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
 }
 
@@ -427,11 +416,11 @@ header.scroll-up {
   font-size: 2.5rem;
   color: var(--primary);
   margin-bottom: 20px;
-  transition: transform 0.5s ease;
+  transition: none;
 }
 
 .feature-card:hover .feature-icon {
-  transform: scale(1.1) rotate(5deg);
+  transform: none;
 }
 
 .feature-card h3 {
@@ -477,7 +466,7 @@ header.scroll-up {
 }
 
 .blood-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-2px);
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
 }
 
@@ -595,8 +584,8 @@ header.scroll-up {
 }
 
 .steps li:hover {
-  transform: translateX(5px);
-  background-color: rgba(229, 57, 53, 0.05);
+  transform: none;
+  background-color: rgba(229, 57, 53, 0.03);
 }
 
 .step-number {
@@ -614,8 +603,8 @@ header.scroll-up {
 }
 
 .steps li:hover .step-number {
-  transform: scale(1.1);
-  box-shadow: 0 0 0 5px rgba(229, 57, 53, 0.2);
+  transform: none;
+  box-shadow: none;
 }
 
 /* Loading animation */
@@ -756,7 +745,7 @@ header.scroll-up {
 
 .btn-white:hover {
   background-color: var(--text-light);
-  transform: translateY(-2px);
+  transform: translateY(-1px);
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
 }
 
@@ -848,11 +837,11 @@ footer {
 
 .social-links a:hover {
   background-color: var(--primary);
-  transform: translateY(-3px);
+  transform: translateY(-1px);
 }
 
 .social-links a:hover i {
-  animation: pulse 1s;
+  animation: none;
 }
 
 .footer-bottom {
